@@ -2,7 +2,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public class Builder2 {
+public class Builder {
     public static void main(String[] args) {
         PaymentDocument2 paymentDocument = PaymentDocument2.builder()
                 .docGuid(UUID.randomUUID())
@@ -16,7 +16,7 @@ public class Builder2 {
     }
 }
 
-class PaymentDocument2 {
+class PaymentDocument {
     private UUID docGuid;
     private BigDecimal sumAmount;
     private LocalDateTime docDate;
@@ -27,7 +27,7 @@ class PaymentDocument2 {
         return new PaymentDocument2.Builder();
     }
 
-    private PaymentDocument2(Builder builder) {
+    private PaymentDocument(Builder builder) {
         this.docGuid = builder.docGuid;
         this.sumAmount = builder.sumAmount;
         this.docDate = builder.docDate;

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Builder {
     public static void main(String[] args) {
-        PaymentDocument paymentDocument = new PaymentDocument.Builder()
+        PaymentDocument2 paymentDocument = new PaymentDocument2
                 .docGuid(UUID.randomUUID())
                 .sumAmount(BigDecimal.valueOf(200))
                 .docDate(LocalDateTime.now())
@@ -63,14 +63,14 @@ class PaymentDocument {
             return this;
         }
 
-        public PaymentDocument build() {
-            return new PaymentDocument(this);
+        public PaymentDocument2 build() {
+            return new PaymentDocument2(this);
         }
     }
 
     @Override
     public String toString() {
-        return "PaymentDocument{" +
+        return "PaymentDocument2{" +
                 "docGuid=" + docGuid +
                 ", sumAmount=" + sumAmount +
                 ", docDate=" + docDate +
