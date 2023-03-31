@@ -1,3 +1,5 @@
+package builder.v2;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -70,7 +72,11 @@ class PaymentDocument {
 
     @Override
     public String toString() {
+<<<<<<<< HEAD:creational/builder/v1/Builder.java
         return "PaymentDocument2{" +
+========
+        return "creational.builder.v1.PaymentDocument{" +
+>>>>>>>> 951f008 (add singleton patterns):src/main/java/builder/v2/Builder.java
                 "docGuid=" + docGuid +
                 ", sumAmount=" + sumAmount +
                 ", docDate=" + docDate +

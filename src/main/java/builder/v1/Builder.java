@@ -1,10 +1,12 @@
+package builder.v1;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Builder {
     public static void main(String[] args) {
-        PaymentDocument2 paymentDocument = PaymentDocument2.builder()
+        PaymentDocument paymentDocument = PaymentDocument.builder()
                 .docGuid(UUID.randomUUID())
                 .sumAmount(BigDecimal.valueOf(200))
                 .docDate(LocalDateTime.now())
@@ -24,7 +26,7 @@ class PaymentDocument {
     private String payee;
 
     public static Builder builder() {
-        return new PaymentDocument2.Builder();
+        return new PaymentDocument.Builder();
     }
 
     private PaymentDocument(Builder builder) {
@@ -67,14 +69,14 @@ class PaymentDocument {
             return this;
         }
 
-        public PaymentDocument2 build() {
-            return new PaymentDocument2(this);
+        public PaymentDocument build() {
+            return new PaymentDocument(this);
         }
     }
 
     @Override
     public String toString() {
-        return "PaymentDocument2{" +
+        return "creational.builder.v2.PaymentDocument2{" +
                 "docGuid=" + docGuid +
                 ", sumAmount=" + sumAmount +
                 ", docDate=" + docDate +
